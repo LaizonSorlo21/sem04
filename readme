@@ -1,0 +1,42 @@
+📦 Ejecución del proyecto
+🐳 1. Versión Base (Dockerfile)
+
+Construir la imagen:
+
+docker build -t tiktok-app:v1 .
+
+Ejecutar el contenedor:
+
+docker run -d -p 5000:5000 --name tiktok-container tiktok-app:v1
+
+Acceder en el navegador:
+
+http://localhost:5000
+
+⚡ 2. Versión Optimizada (Dockerfile.optimizado)
+
+Construir la imagen:
+
+docker build -f Dockerfile.optimizado -t tiktok-app:opt .
+
+Ejecutar el contenedor:
+
+docker run -d -p 5001:5000 --name tiktok-opt tiktok-app:opt
+
+Acceder en el navegador:
+
+http://localhost:5001
+
+🚀 3. Versión Multi-Stage (Dockerfile.multistage)
+
+Construir la imagen:
+
+docker build -f Dockerfile.multistage -t tiktok-app:multi .
+
+Ejecutar el contenedor:
+
+docker run -d -p 5002:5000 --name tiktok-multi tiktok-app:multi
+
+Acceder en el navegador:
+
+http://localhost:5002
